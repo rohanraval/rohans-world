@@ -4,6 +4,8 @@ backend:
 
 media_folder: "img/uploads" # Folder where user uploaded files should go
 
+publish_mode: editorial_workflow
+
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
@@ -14,6 +16,6 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Categories", name: "categories", widget: "string", required: false}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "MM-DD-YYYY hh:mmA"}
+      - {label: "Categories", name: "categories", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
